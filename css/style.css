@@ -14,8 +14,9 @@
     height: 100px;
     width: 100%;
     background-color: #528F81;
-    position: sticky;
+    position: fixed;
     top: 0px;
+    z-index: 3;
 }
 #logo {
     max-height: 60px;
@@ -36,7 +37,6 @@
 }
 .txt{
     display: none;
-    opacity: 0;
     z-index: -3;
 }
 
@@ -57,10 +57,6 @@
     background-color: #528F81;
     width: 5rem;
 }
-
-#one {
-    background-image: url(/images/vid.mp4);
-}
 #two{
     padding: 50px 0 55px 0;
     position: relative;
@@ -69,29 +65,21 @@
 #two1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 60px;
     max-width: 1140px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.sec{
+.sec{ overflow:visible;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: relative;
     max-width: 700px;
-    padding-bottom: 25px;
-    margin: 0px 205px 60px;
-    padding: 0px 0px 25px; 
+    padding: 0px 0px 25px;
+    transition: ease-in; 
 }
-
 .headone {
     color: #666666;
     font-size: 35px;
@@ -120,7 +108,7 @@
     font-size: 5px;
     margin-bottom: 20px;
 }
-.about-content{
+.about-content{ overflow:visible;
     position: relative;
     width: 80%;
     margin: -110px auto 0 auto;
@@ -132,36 +120,23 @@
     font-weight: 700;
     color: #000;
     margin: 0 0 15px 0;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
 }
 .pra{
     font-size: 16px;
-    color: #000!important;
-    padding: 0;
-    margin: 0 0 15px 0;
-    font-weight: 400!important;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-}
-.about-img{
-    position: relative;
-    overflow: hidden;
+    color: #000;
+    font-weight: 400;
 }
 .img-ffluid{
     max-width: 100%;
     height: auto;
     vertical-align: middle;
     border-style: none;
-    overflow-clip-margin: content-box;
-    overflow: clip;
 }
 .prra{
     font-size: 16px;
-    color: #000!important;
-    padding: 0;
+    color: #000;
     margin: 0 0 15px 0;
-    font-weight: 400!important;
+    font-weight: 400;
     margin-block-end: 1em;
 }
 
@@ -174,10 +149,7 @@
     justify-content: center;
 }
 .col-lg-3{
-    flex: 0 0 25%;
     max-width: 22%;
-    position: relative;
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -204,16 +176,13 @@
 }
 /* section 4 */
 .call-to-action{
-    position: relative;
     padding: 90px 0;
     background: #4F84C4;
 }
 .container-fluid{
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    height: auto;
+    overflow: visible;
 }
 .text-center{
     text-align: center!important;
@@ -223,6 +192,7 @@
     max-width: 700px;
     margin: 54px auto 60px auto;
     padding-bottom: 25px;
+    overflow:visible;
 }
 .btn{
     padding: 15px 30px;
@@ -232,11 +202,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     background: #528f81;
-    border-radius: 0;
-    transition: 0.3s;
-    line-height: 1.5rem;
     text-align: center;
-    vertical-align: middle;
 }
 .head2{
     font-size: 35px;
@@ -251,7 +217,6 @@
     font-size: 22px;
     font-weight: 300;
     text-align: center;
-    margin: 0;
     margin-block-start: 1em;
     margin-block-end: 1em;
     color: white;
@@ -277,6 +242,10 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    overflow: visible;
+}
+.team{
+    overflow: visible;
 }
 .col3{
     flex: 0 0 25%;
@@ -293,18 +262,13 @@
     letter-spacing: 5px;
     color: #ffffff;
     margin: 0 0 15px 0;
-    padding: 0;
     line-height: 1.2;
-    margin-block-end: 0.80em;
 }
 .para3{
     font-size: 22px;
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    padding: 0;
+    color: #ffffff;
+    font-weight: 700 ;
     margin: 0 0 15px 0;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
 }
 /* section5 */
 .team{
@@ -325,6 +289,7 @@
     height: auto;
     vertical-align: middle;
     border-style: none;
+    overflow: visible;
 }
 .teaminfo{
     position: relative;
@@ -347,9 +312,8 @@
 .para4{
     font-size: 14px;
     text-transform: uppercase;
-    color: #000!important;
-    padding: 0;
-    font-weight: 400!important;
+    color: #000;
+    font-weight: 400;
     text-align: center;
 }
 .roww{
@@ -361,17 +325,16 @@
     gap: 15px;
 }
 .testimonial-text{
-    position: relative;
-    width: 100%;
     padding: 30px 15px;
     text-align: center;
     background: #ffffff;
+    overflow: visible;
 }
-.carousal .owl-nav{
-    position: absolute;
-    top: 20px;
+.owl-stage{
+    overflow: visible;
 }
 /* footer */
+
 .footer{
     position: relative;
     padding: 0 0 30px 0;
@@ -384,7 +347,6 @@
 .col-lg-5{
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
-    position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -392,15 +354,12 @@
 .col-md-6{
     text-align: left;
     max-width: 40%;
-    position: relative;
-    width: 90%;
     padding-right: 15px;
     padding-left: 15px;
 }
 .copyright{
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
 }
 
@@ -409,7 +368,6 @@
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
-    position: relative;
     padding-bottom: 12px;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -424,32 +382,27 @@
     padding-right: 8px;
     color: #ffffff;
     font-size: 16px;
-    font-style: italic;
 }
 .anc{
     font-size: 14px;
-    color: #fff!important;
+    color: #fff;
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
 }
 .text-white{
     line-height: 26px;
-    color: #fff!important;
+    color: #fff;
     margin: 0 0 15px 0;
-    font-weight: 400!important;
+    font-weight: 400;
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
 .input{
     padding: 6px 8px;
-    width: 60%;
     border: 1px solid #ffffff;
     background: transparent;
     color: #ffffff;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
 }
 .input1{
     width: 40%;
@@ -458,11 +411,7 @@
     color: #4F84C4;
     border: 1px solid #ffffff;
     background: #ffffff;
-    transition: 0.3s;
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
 }
 }
 @media (min-width: 706px) and (max-width: 1230px){
@@ -470,27 +419,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100px;
+        height: 70px;
         width: 100%;
         background-color: #528F81;
-        position: sticky;
+        position:fixed;
         top: 0px;
-        z-index: 1;
+        z-index: 5;
     }
 
     #logo {
         max-height: 60px;
         position: absolute;
-        left: 30px;
-        top: 20px;
+        left: 10px;
+        top: 5px;
 
     }
 
     #ham{
-        height: 1.5rem;
+        height: 3rem;
         position: absolute;
-        right: 60px;
-        top: 40px;
+        right: 10px;
+        top: 10px;
         z-index: 2;
     }
 
@@ -500,7 +449,7 @@
         align-items: flex-start;
         position: absolute;
         left: 0px;
-        top: 100px;
+        top: 71px;
         background-color: #528F81;
         width: 100%;
         z-index: 1;
@@ -520,9 +469,9 @@
     .gnc{
         text-decoration: none;
         color: white;
-        font-size: 16px;
+        font-size: 14.5px;
         text-transform: uppercase;
-        margin: 0px 0px 0px 25px;
+        margin: 0px 0px 0px 20px;
         padding: 6px 0px;
     }
 
@@ -553,7 +502,7 @@
         gap: 30px;
     }
     
-    .sec{
+    .sec{ overflow:visible;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -568,7 +517,7 @@
         letter-spacing: 6px;
         margin: 20px;
     }
-    
+    .col-md-12{ overflow:visible;  }
     .para {
         font-size: 22px;
         line-height: 1.5;
@@ -577,7 +526,6 @@
         font-family: sans-serif;
     
     }
-    
     #sp {
     
         width: 100px;
@@ -588,7 +536,7 @@
         font-size: 5px;
         margin-bottom: 20px;
     }
-    .about-content{
+    .about-content{ overflow:visible;
         position: relative;
         width: 80%;
         margin: -110px auto 0 auto;
@@ -684,6 +632,8 @@
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+        overflow: visible;
+        box-sizing: border-box;
     }
     .text-center{
         text-align: center!important;
@@ -693,6 +643,8 @@
         max-width: 700px;
         margin: 54px auto 60px auto;
         padding-bottom: 25px;
+        overflow: visible;
+        box-sizing: border-box;
     }
     .btn{
         
@@ -843,6 +795,9 @@
         position: absolute;
         top: 20px;
     }
+    .owl-stage{
+        overflow: visible;
+    }
     /* footer */
     .footer{
         position: relative;
@@ -944,28 +899,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100px;
+        height: 70px;
         width: 100%;
         background-color: #528F81;
-        position: sticky;
+        position: fixed;
         top: 0px;
-        z-index: 1;
+        z-index: 5;
     }
 
     #logo {
         max-height: 60px;
         position: absolute;
-        left: 30px;
-        top: 20px;
+        left: 10px;
+        top: 5px;
 
     }
 
     #ham{
-        height: 1.5rem;
+        height: 3rem;
         position: absolute;
-        right: 60px;
-        top: 40px;
+        right: 10px;
+        top: 10px;
         z-index: 2;
+        position: fixed;
     }
 
     .txt {
@@ -974,7 +930,7 @@
         align-items: flex-start;
         position: absolute;
         left: 0px;
-        top: 100px;
+        top: 71px;
         background-color: #528F81;
         width: 100%;
         z-index: 1;
@@ -994,9 +950,9 @@
     .gnc{
         text-decoration: none;
         color: white;
-        font-size: 16px;
+        font-size: 14.5px;
         text-transform: uppercase;
-        margin: 0px 0px 0px 25px;
+        margin: 0px 0px 0px 20px;
         padding: 6px 0px;
     }
 
@@ -1027,7 +983,7 @@
         gap: 30px;
     }
     
-    .sec{
+    .sec{ overflow:visible;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1062,7 +1018,7 @@
         font-size: 5px;
         margin-bottom: 20px;
     }
-    .about-content{
+    .about-content{ overflow:visible;
         position: relative;
         width: 70%;
         margin: -110px auto 0 auto;
@@ -1168,6 +1124,7 @@
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+        overflow: visible;
     }
     .text-center{
         text-align: center!important;
@@ -1177,6 +1134,7 @@
         max-width: 700px;
         margin: 54px auto 60px auto;
         padding-bottom: 25px;
+        overflow: visible;
     }
     .btn{
         
@@ -1328,6 +1286,9 @@
         position: absolute;
         top: 20px;
     }
+    .owl-stage{
+        overflow: visible;
+    }
     /* footer */
     .footer{
         position: relative;
@@ -1345,6 +1306,7 @@
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
+        overflow: visible;
     }
     .col-md-66{
         flex: 0 0 100%;
