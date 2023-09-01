@@ -422,7 +422,7 @@
         height: 70px;
         width: 100%;
         background-color: #528F81;
-        position:fixed;
+        /* position:fixed; */
         top: 0px;
         z-index: 5;
     }
@@ -902,7 +902,7 @@
         height: 70px;
         width: 100%;
         background-color: #528F81;
-        position: fixed;
+        /* position: fixed; */
         top: 0px;
         z-index: 5;
     }
